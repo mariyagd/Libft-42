@@ -6,6 +6,20 @@
 /*   By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 00:00:43 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/08/16 17:54:46 by mdanchev         ###   ########.fr       */
+/*   Updated: 2022/08/17 14:11:31 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		*(unsigned char *)(b + i) = (unsigned char)c;
+		i++;
+	}
+	return (b);
+}
