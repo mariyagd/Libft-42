@@ -6,9 +6,10 @@
 /*   By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 21:08:15 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/08/17 21:14:17 by mdanchev         ###   ########.fr       */
+/*   Updated: 2022/08/17 21:21:46 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
