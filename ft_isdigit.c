@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 20:03:53 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/08/17 21:17:11 by mdanchev         ###   ########.fr       */
+/*   Created: 2022/08/17 21:08:15 by mdanchev          #+#    #+#             */
+/*   Updated: 2022/08/17 21:14:17 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <ctype.h>
-#include <stdio.h>
 
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	if (c >= 'a' && c <= 'z')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
