@@ -3,7 +3,7 @@ Libft 42 Projet
 
 The following functions are recoded based-on their man description:
 
-isalpha, isdigit, isalnum, isascii, isprint \n
+isalpha, isdigit, isalnum, isascii, isprint 
 memset, memcpy, memmove, memchr, memcmp
 toupper, tolower
 strlen, strchr
