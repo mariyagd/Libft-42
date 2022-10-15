@@ -12,6 +12,6 @@ The following functions are recoded based-on their man description:
  strrchr,
  atoi,
  bzero,
- strtrim, strjoin,
+ strtrim, strjoin, substr
 
 A distinct repository contains man descriptions in french of some functions.
