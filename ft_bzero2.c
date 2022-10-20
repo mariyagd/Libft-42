@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_isalpha.c                                     :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 12:00:31 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/10/18 13:23:05 by mdanchev         ###   ########.fr       */
+/*   Created: 2022/10/18 14:22:26 by mdanchev          #+#    #+#             */
+/*   Updated: 2022/10/18 14:50:14 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <ctype.h>
+#include <stddef.h>
+#include "libft.h"
 
-int ft_isalpha(int c);
-
-int	main(void)
+void	ft_bzero(void *s, size_t n)
 {
-	// 357 % 256 = 101 'e'
-	int c = 357;
-	printf("%d\n", isalpha(c));
-	printf("%d\n", ft_isalpha(c));
+	size_t	i;
 
-	// 325 % 256 = 69 'E'
-	c = 325;
-	printf("%d\n", isalpha(c));
-	printf("%d\n", ft_isalpha(c));
-
-	// 84 = 'T'
-	c = 84;
-    printf("%d\n", isalpha(c));
-    printf("%d\n", ft_isalpha(c));
-
-	return (0);
+	i = 0;
+	if (n != 0)
+	{
+		while (n > 0)
+		{
+			*(char *)(s + i) = '\0';
+			i++;
+			n--;
+		}
+	}
 }
-
-

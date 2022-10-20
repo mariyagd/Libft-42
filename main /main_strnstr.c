@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 23:03:31 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/08/30 12:27:47 by mdanchev         ###   ########.fr       */
+/*   Updated: 2022/10/20 13:56:33 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -111,7 +111,7 @@ int	main(void)
 //	printf("%s\n", ft_strnstr(h,((void *)0),10));
 
 
-//	printf("%s\n", strnstr(((void *)0),((void *)0),10));
+	printf("%s\n", strnstr(((void *)0),((void *)0),10));
 //	printf("%s\n", ft_strnstr(((void *)0),((void *)0),10));
 	return (0);
 }

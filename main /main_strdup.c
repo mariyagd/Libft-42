@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main_strdup.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 13:35:54 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/10/18 17:04:26 by mdanchev         ###   ########.fr       */
+/*   Created: 2022/10/20 14:47:25 by mdanchev          #+#    #+#             */
+/*   Updated: 2022/10/20 14:53:51 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void *ft_memset(void *b, int c, size_t len)
+int	main(void)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (len > i)
+	char *s1;
+	char *s2;
+	s1 = "mariya\0 est ici";
+	printf("%c\n", s1[15]);
+	
+	s2 = strdup(s1);
+	printf("%s\n", s2);
+	int i = -1;
+	while (++i <= 15)
 	{
-		*(unsigned char *)(b + i) = (unsigned char)c;
-		i++;
+		printf("%c\n", s2[i]);
 	}
-	return (b);
+	return (0);
 }
+

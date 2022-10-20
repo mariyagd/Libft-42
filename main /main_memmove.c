@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 14:24:00 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/08/17 13:57:56 by mdanchev         ###   ########.fr       */
+/*   Updated: 2022/10/20 10:07:10 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -17,6 +17,7 @@ int	main(void)
     char dst[7]= "1234567";
     printf("%s\n", memmove(dst, "mariya", 5));
     printf("%s\n", memmove(((void*)0), ((void*)0) , 3));
+//    printf("%s\n", memmove(((void*)0), ((void*)0) , 3));
 //    printf("%s\n", memmove(((void*)0), "segfaulter tu dois", 17));
 
     printf("\nFONCTION ORIGINALE MEMMOVE CAS DE CHEVAUCHEMENT\n");

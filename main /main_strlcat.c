@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 19:56:39 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/10/13 12:44:54 by mdanchev         ###   ########.fr       */
+/*   Updated: 2022/10/20 11:51:47 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,16 @@ int	main(void)
 	//cas pas de concatenation
 
     //cas de concatenation reussie	
+
+	char desti[10] = "HELLO";
+	char source[6] = "123456";
+
+	printf("%lu %s\n", strlcat(desti, source , 0), desti);
+
+// CAS DE SEG FAULT
+//	printf("%lu\n", strlcat(((void *)0), source , 5));
+//	printf("%lu\n", strlcat(desti, ((void *)0) , 0));
+//	printf("%lu\n", strlcat(((void *)0), ((void *)0) , 0));
 
 	char s1[4] = "";
 	char s3[8] = "1234";
