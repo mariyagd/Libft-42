@@ -17,3 +17,5 @@ The following functions are recoded based-on their man description:
 
 A distinct repository contains man descriptions in french of some functions.
 
+"main" folder contains some personnal tests.
+
