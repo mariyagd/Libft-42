@@ -6,12 +6,14 @@ The following functions are recoded based-on their man description:
  isalpha, isdigit, isalnum, isascii, isprint 
  memset, memcpy, memmove, memchr, memcmp,
  toupper, tolower,
- strlen, strchr,
+ strlen, strchr, strrchr
  strlcpy, strlcat,
  strnstr, strncmp,
- strrchr,
  atoi,
  bzero,
- strtrim, strjoin, substr
+ strtrim, strjoin, substr, split, strmapi, striteri
+ itoa
+ putchar_fd, putstr_fd, putendl_fd, putnbr_fd
 
 A distinct repository contains man descriptions in french of some functions.
+
