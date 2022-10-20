@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:32:27 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/10/18 11:26:55 by mdanchev         ###   ########.fr       */
+/*   Updated: 2022/10/20 18:07:22 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -15,6 +15,12 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
