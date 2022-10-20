@@ -19,3 +19,6 @@ A distinct repository contains man descriptions in french of some functions.
 
 "main" folder contains some personnal tests.
 
+"libft_list.numbers" contains resumé of the functions.
+
+"extra" folder contains a second way to write some function of my libft.
