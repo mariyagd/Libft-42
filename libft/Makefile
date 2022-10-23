@@ -6,7 +6,7 @@
 #    By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 12:21:59 by mdanchev          #+#    #+#              #
-#    Updated: 2022/10/17 17:33:56 by mdanchev         ###   ########.fr        #
+#    Updated: 2022/10/23 17:18:59 by mdanchev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,12 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_isalpha.c ft_memmove.c ft_memchr.c 
 	   ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c \
 	  ft_split.c ft_itoa.c ft_strmapi.c 
 
+SRCSBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c
+
 OBJS = ${SRCS:.c=.o}
+
+OBJSBONUS = ${SRCSBONUS:.c=.o}
 
 NAME = libft.a
 
@@ -34,6 +39,10 @@ $(NAME): ${OBJS}
 		ar rc ${NAME} ${OBJS}
 
 all:	${NAME}
+
+bonus: ${NAME}
+		${CC} ${CFLAGS} -c ${SRCSBONUS}
+		ar rc ${NAME} ${OBJSBONUS}
 
 clean:
 		${RM} ${OBJS}
