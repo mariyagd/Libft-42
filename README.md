@@ -23,4 +23,6 @@ A distinct repository contains man descriptions in french of some functions.
 
 "extra" folder contains a second way to write some functions of my libft.
 
-https://forthebadge.com/images/badges/works-on-my-machine.svg
+[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
+
+![tested-with-francinette](https://user-images.githubusercontent.com/109855801/197752797-b9b72026-ee88-4e35-9820-6ddb7ebd5e3d.svg)
