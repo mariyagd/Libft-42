@@ -27,4 +27,4 @@ A distinct repository contains man descriptions in french of some functions.
 
 ![tested-with-francinette](https://user-images.githubusercontent.com/109855801/197752797-b9b72026-ee88-4e35-9820-6ddb7ebd5e3d.svg)        
 
-![evaluated-by-moulinette](https://user-images.githubusercontent.com/109855801/197753823-28a856c1-50ce-45ea-aa36-8bc978f8e0d3.svg)
+![evaluated-by-moulinette (1)](https://user-images.githubusercontent.com/109855801/197754015-26efbff7-26cf-4983-912d-1e1fbccd6426.svg)
