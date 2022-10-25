@@ -26,6 +26,5 @@ The following functions are recoded based-on their man description:
 
 [![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
 
-![tested-with-francinette](https://user-images.githubusercontent.com/109855801/197752797-b9b72026-ee88-4e35-9820-6ddb7ebd5e3d.svg)        
-
-![evaluated-by-moulinette (1)](https://user-images.githubusercontent.com/109855801/197754015-26efbff7-26cf-4983-912d-1e1fbccd6426.svg)
+![tested-by-francinette](https://user-images.githubusercontent.com/109855801/197756684-398398ae-507f-4b9a-9d38-8346424e6558.svg)
+![evaluated-by-moulinette (3)](https://user-images.githubusercontent.com/109855801/197756696-cde68131-7d32-4b54-9f02-5145ca05133f.svg)
