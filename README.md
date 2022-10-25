@@ -14,8 +14,9 @@ The following functions are recoded based-on their man description:
  strtrim, strjoin, substr, split, strmapi, striteri
  itoa
  putchar_fd, putstr_fd, putendl_fd, putnbr_fd
-
-A distinct repository contains man descriptions in french of some functions.
+ ft_lstnew, ft_lstadd_front, ft_lstsize, ft_lstlast, ft_lstadd_front, ft_lstadd_back, ft_lstdelone, ft_lstclear, ft_lstiter, ft_lstmap
+ 
+ A distinct repository contains man descriptions in french of some functions.
 
 "main" folder contains some personnal tests.
 
