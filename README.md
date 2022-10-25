@@ -1,7 +1,7 @@
 # Libft-42
 Libft 42 Projet
 
-The following functions are recoded based-on their man description:
+The following functions are a part of the libc and recoded based-on their man description:
 
  isalpha, isdigit, isalnum, isascii, isprint 
  memset, memcpy, memmove, memchr, memcmp,
@@ -11,6 +11,9 @@ The following functions are recoded based-on their man description:
  strnstr, strncmp,
  atoi,
  bzero,
+ 
+ These functions are not a part of the libc:
+ 
  strtrim, strjoin, substr, split, strmapi, striteri
  itoa
  putchar_fd, putstr_fd, putendl_fd, putnbr_fd
