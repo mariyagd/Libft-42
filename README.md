@@ -22,3 +22,5 @@ A distinct repository contains man descriptions in french of some functions.
 "libft_list.numbers" contains resumé of the functions.
 
 "extra" folder contains a second way to write some functions of my libft.
+
+https://forthebadge.com/images/badges/works-on-my-machine.svg
