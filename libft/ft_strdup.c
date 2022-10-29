@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 12:27:10 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/08/27 12:50:52 by mdanchev         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:03:25 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -20,6 +20,6 @@ char	*ft_strdup(const char *s1)
 	s1_copie = (char *)malloc(size * sizeof(char));
 	if (!s1_copie)
 		return (NULL);
-	ft_memcpy(s1_copie, s1, size);
+	ft_strlcpy(s1_copie, s1, size);
 	return (s1_copie);
 }
