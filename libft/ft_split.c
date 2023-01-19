@@ -3,91 +3,78 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdanchev <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: bkukaqi <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 10:13:17 by mdanchev          #+#    #+#             */
-/*   Updated: 2022/10/17 12:55:47 by mdanchev         ###   ########.fr       */
+/*   Created: 2022/10/28 14:33:25 by bkukaqi           #+#    #+#             */
+/*   Updated: 2022/10/28 16:25:40 by bkukaqi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-size_t	ft_count_nbsubstr(const char *s, char c)
+static size_t	ft_strcount(char const *s, char c)
 {
-	unsigned int	i;
-	size_t			count;
+	size_t	count;
+	size_t	i;
 
-	i = 0;
 	count = 0;
-	while (s[i] != '\0')
+	i = 0;
+	while (s[i])
 	{
-		if (s[i] != c)
-		{
-			while (s[i] != c && s[i] != '\0')
-				i++;
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 			count++;
-		}
-		while (s[i] == c)
-			i++;
+		i++;
 	}
+	count++;
+	if (s[0] == c)
+		return (count - 1);
 	return (count);
 }
 
-unsigned int	ft_start_index_substr(char const *s, char c, unsigned int start)
+static char	*ft_newstr(char const *s, char c)
 {
-	while (s[start] == c && s[start] != '\0')
-		start++;
-	return (start);
-}
-
-unsigned int	ft_nb_char_substr(char const *s, char c, unsigned int start)
-{
-	unsigned int	nb_char_substr;
-
-	nb_char_substr = 0;
-	while (s[start] != c && s[start] != '\0')
-	{
-		start++;
-		nb_char_substr++;
-	}
-	return (nb_char_substr);
-}
-
-char	*ft_create_substr(\
-		char const *s, char c, unsigned int start, unsigned int nb_char_substr)
-{
-	unsigned int	i;
-	char			*substr;
+	char	*newstr;
+	size_t	i;
 
 	i = 0;
-	substr = (char *)ft_calloc((nb_char_substr + 1), sizeof(char));
-	if (!substr)
+	while (s[i] && s[i] != c)
+		i++;
+	newstr = (char *)ft_calloc(i + 1, sizeof(char));
+	if (!newstr)
 		return (NULL);
-	while (s[start] != c && s[start] != '\0' && i < nb_char_substr)
-		substr[i++] = s[start++];
-	return (substr);
+	i = 0;
+	while (s[i] && s[i] != c)
+	{
+		newstr[i] = s[i];
+		i++;
+	}
+	return (newstr);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t			nb_substr;
-	size_t			i;
-	char			**tab2d;
-	unsigned int	start;
-	unsigned int	nb_char_substr;
+	char	**tab;
+	size_t	strcount;
+	size_t	i;
 
-	i = 0;
-	start = 0;
-	nb_substr = ft_count_nbsubstr(s, c);
-	tab2d = (char **)ft_calloc((nb_substr + 1), sizeof(char *));
-	if (!tab2d)
+	if (!s)
 		return (NULL);
-	while (s[start] != '\0' && i < nb_substr)
+	strcount = ft_strcount(s, c);
+	tab = (char **)ft_calloc(strcount + 1, sizeof(char *));
+	if (!tab)
+		return (NULL);
+	i = 0;
+	while (*s)
 	{
-		start = ft_start_index_substr(s, c, start);
-		nb_char_substr = ft_nb_char_substr(s, c, start);
-		tab2d[i] = ft_create_substr(s, c, start, nb_char_substr);
-		start = start + nb_char_substr;
-		i++;
+		while (*s && *s == c)
+			s++;
+		if (*s && *s != c)
+		{
+			tab[i] = ft_newstr(s, c);
+			i++;
+			while (*s && *s != c)
+				s++;
+		}
 	}
-	return (tab2d);
+	return (tab);
 }
